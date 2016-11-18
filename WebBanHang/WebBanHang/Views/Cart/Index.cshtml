@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<form action="/Cart/Update">
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Unit prices</th>
+            <th>Discount</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+        </tr>
+        @foreach (var sp in ShoppingCart.Cart.Items)
+        {
+            <tr>
+                <td>@sp.Name</td>
+                <td>@Html.FormatValue(sp.UnitPrice, "{0:c}")</td>
+                <td><input name="@sp.Id" value="@sp.Amount" size="3" /></td>
+                <td>@Html.FormatValue((sp.UnitPrice * sp.Amount), "{0:c}")</td>
+                <td>
+                    <a href="#" class="remove-from-cart" data-id="@sp.Id">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <div>
+        <a class="btn btn-default" href="@Session["prodUrl"]">Continue shopping</a>
+        <a class="btn btn-default" href="/Cart/Clear">Clear cart</a>
+        <button class="btn btn-default"> Update Quantity</button>
+        <a class="btn btn-default" href="/Order/Checkount">Check out</a>
+    </div>
+</form>
+
+
+
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="00fbe265660e40778a921d7b5fc97610" Name="Diagram1">
+        <EntityTypeShape EntityType="SHOPModel.Category" Width="1.5" PointX="5.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.Customer" Width="1.5" PointX="5.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.MasterRole" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.Master" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.Order_Account" Width="1.5" PointX="2.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.OrderDetail" Width="1.5" PointX="10.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.Order" Width="1.5" PointX="8" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.Product" Width="1.5" PointX="8" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.RoleAction" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.Role" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.WebAction" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="SHOPModel.FK_HangHoa_Loai1" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPModel.FK_Orders_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPModel.FK_UserInRoles_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPModel.FK_UserInRoles_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPModel.FK_OrderDetails_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPModel.FK_OrderDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPModel.FK_Permissions_Actions" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPModel.FK_Permissions_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

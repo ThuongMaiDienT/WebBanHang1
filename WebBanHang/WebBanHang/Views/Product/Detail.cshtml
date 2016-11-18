@@ -1,0 +1,52 @@
+﻿@model WebBanHang.Models.Product
+@{
+    ViewBag.Title = "Detail";
+}
+<h2>Detail</h2>
+<div class="nn-prod-detail">
+    <img class="col-sm-5 image" src="~/images/products/@Model.Image" />
+    <ul class="col-sm-7 info">
+        <li> Name: @Model.Name</li>
+        <li> Unitprice: @Model.UnitPrice</li>
+        <li> Category: @Model.Category.NameVN</li>
+    </ul>
+    <div class="nn-desc">
+        @Model.Description
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Hàng cùng loại</a></li>
+        <li><a data-toggle="tab" href="#menu2">Hàng đã xem</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <p>
+                <fieldset class="thumb">
+                    @foreach (var p in Model.Category.Products.Where(p => p.Id != Model.Id))
+                    {
+                        <a href="/Product/Detail/@p.Id">
+                            <img class="img" src="~/images/products/@p.Image" />
+                        </a>
+                    }
+                </fieldset>
+            </p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <p>
+                <fieldset class="thumb">
+                    @foreach (var p in ViewBag.View)
+                    {
+                        <a href="/Product/Detail/@p.Id">
+                            <img class="img" src="~/images/products/@p.Image" />
+                        </a>
+                    }
+                </fieldset>
+            </p>
+        </div>
+    </div>
+
+
+</div>
+
+
+

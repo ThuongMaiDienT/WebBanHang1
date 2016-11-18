@@ -1,0 +1,15 @@
+﻿@model IEnumerable<WebBanHang.Models.Category>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="glyphicon glyphicon-th-list"></span>
+        <strong>Category
+        </strong>
+    </div>
+
+    <div class="list-group">
+        @foreach (var c in Model)
+        {
+        <a href="/Product/ListBycate/@c.Id" class="list-group-item">@c.NameVN</a>
+        }
+    </div>
+</div>

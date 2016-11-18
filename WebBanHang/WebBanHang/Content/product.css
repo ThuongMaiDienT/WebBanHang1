@@ -1,0 +1,77 @@
+/*--PRODUCT LIST--*/
+
+.nn-body>.col-sm-4{
+	padding: 5px;
+	margin: 0px;
+}
+
+.nn-prod{
+	text-align: center;
+	border-radius:5px;
+	box-shadow:0 0 3px lightgray;
+	position: relative;
+}
+
+.nn-prod .name{
+	line-height: 30px;
+	font-variant: small-caps;
+}
+
+.nn-prod .image{
+	height: 150px;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.nn-prod .icon{
+	position: absolute;
+	top:0px;
+	right: 0px;
+}
+
+.nn-prod .price{
+	position: absolute;
+	bottom:5px;
+	left: 5px;
+	font-size: larger;
+	color: gray;
+	font-weight: bold;
+}
+
+.nn-prod .icons{
+	position: absolute;
+	bottom:5px;
+	right: 5px;
+	width: 24px;
+}
+
+/*--PRODUCT DETAIL--*/
+
+.nn-prod-detail .nn-desc{
+
+}
+.nn-prod-detail .image{
+	height: 250px;
+	max-width: 100%;
+}
+
+.nn-prod-detail .info{
+	list-style-image: url("../images/postbullets.png");
+	font-variant: small-caps;
+	line-height: 25px;
+}
+
+.thumb a{
+	text-decoration: none;
+}
+.thumb img{
+	width: 60px;
+	height:60px;
+	padding: 5px;
+	margin: 2px;
+	border: 1px dotted gray;
+	border-radius:5px;
+}
+.thumb img:hover{
+	border: 1px dotted red;
+}

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div class="container">
+        <header class="nn-header row">
+            <h1 class="nn-company">Formen</h1>
+            <h5 class="nn-slogan">Website buy fashion clother for men</h5>
+            <img class="nn-logo" src="~/Image/LogoImg.png" style="height:100px;width:500px; margin-top:50px" />
+        </header>
+
+        <div class="navbar navbar-inverse row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            @Html.Partial("_menu")
+        </div>
+
+        <div class="nn-sheet row">
+
+            <article class="col-md-9">
+                <div class="nn-body">
+                @RenderBody()
+                </div>
+            </article>
+
+            <aside class="col-md-3">
+		        <br/>
+                <!--Cart Info-->
+                @Html.Partial("_cart")
+                <!--/Cart Info-->
+                <!--search-->
+                @Html.Partial("_search")
+               <!--/Search-->
+                <!--Chủng loại-->
+               @Html.Action("categorymenu","Home")
+                <!--/Chủng loại-->
+
+                <!--Hàng đặc biệt-->
+                @Html.Partial("_special")       
+                <!--/Hàng đặc biệt-->
+            </aside>
+        </div>
+        <footer class="row" style="text-align:center">
+            <p>Sai Gon University &copy; 11-2016. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

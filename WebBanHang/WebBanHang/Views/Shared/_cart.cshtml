@@ -1,0 +1,14 @@
+﻿
+<script src="~/Scripts/shoppingcart.js"></script>
+<style id="cart-fly">
+</style>
+<div class="panel panel-default nn-cart">
+    <div class="panel-body">
+        <img class="col-md-5" src="~/Image/shoppingcart.gif" />
+        <ul class="col-md-7">
+            <li><strong id="cnt">@ShoppingCart.Cart.Count</strong> items</li>
+            <li>$ <strong id="amt">@ShoppingCart.Cart.Amount</strong></li>
+            <li><a href="/Cart/Index">View Cart</a></li>
+        </ul>
+    </div>
+</div>

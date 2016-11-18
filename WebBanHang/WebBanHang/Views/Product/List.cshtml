@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WebBanHang.Models.Product>
+@{
+    ViewBag.Title = "List";
+}
+
+@foreach (var sp in Model)
+{
+    <div class="col-sm-4">
+        <div class="nn-prod">
+            <div class="name">@sp.Name</div>
+            <a href="/Product/Detail/@sp.Id">
+                <img id="@sp.Id" class="image" src="~/Image/@sp.Image" />
+            </a>
+            <div class="icons">
+                <img class="add-to-cart" data-id="@sp.Id" src="~/icons/Add to basket.png" />
+                <img src="~/icons/Letter.png" />
+                <img src="~/icons/Heart.png" />
+            </div>
+            <div class="price">$ @sp.UnitPrice</div>
+        </div>
+    </div>
+}
+
+
