@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="00fbe265660e40778a921d7b5fc97610" Name="Diagram1">
+      <Diagram DiagramId="996a1446f0f7485d96810ef65abc4925" Name="Diagram1">
         <EntityTypeShape EntityType="SHOPModel.Category" Width="1.5" PointX="5.75" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SHOPModel.Customer" Width="1.5" PointX="5.75" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SHOPModel.MasterRole" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
@@ -15,6 +15,7 @@
         <EntityTypeShape EntityType="SHOPModel.Product" Width="1.5" PointX="8" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SHOPModel.RoleAction" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SHOPModel.Role" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPModel.sysdiagram" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SHOPModel.WebAction" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="SHOPModel.FK_HangHoa_Loai1" ManuallyRouted="false" />
         <AssociationConnector Association="SHOPModel.FK_Orders_Customers" ManuallyRouted="false" />

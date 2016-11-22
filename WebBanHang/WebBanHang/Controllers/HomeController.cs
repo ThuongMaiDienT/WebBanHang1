@@ -9,7 +9,7 @@ namespace WebBanHang.Controllers
 {
     public class HomeController : Controller
     {
-        SHOPEntities1 db = new SHOPEntities1();
+        SHOPEntities db = new SHOPEntities();
         public ActionResult Index()
         {
             return View();

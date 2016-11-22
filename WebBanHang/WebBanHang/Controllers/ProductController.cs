@@ -9,7 +9,7 @@ namespace WebBanHang.Controllers
 {
     public class ProductController : Controller
     {
-        SHOPEntities1 db = new SHOPEntities1();
+        SHOPEntities db = new SHOPEntities();
         // GET: Product
         public ActionResult Index()
         {
@@ -64,7 +64,7 @@ namespace WebBanHang.Controllers
                 //           .Where(p => p.Views > 0)
                 //           .OrderByDescending(p => p.Views)
                 //           .Take(12).ToList();
-                 //   break;
+                //   break;
                 default:
                     model = db.Products.ToList();
                     break;

@@ -9,7 +9,7 @@ namespace WebBanHang.Controllers
 {
     public class AccountController : Controller
     {
-        SHOPEntities1 db = new SHOPEntities1();
+        SHOPEntities db = new SHOPEntities();
         // GET: Account
         public ActionResult Index()
         {
@@ -59,7 +59,7 @@ namespace WebBanHang.Controllers
                 }
                 Response.Cookies.Add(cki);
             }
-            return RedirectToAction("List","Product");
+            return RedirectToAction("List", "Product");
         }
         public ActionResult logout()
         {
@@ -75,7 +75,7 @@ namespace WebBanHang.Controllers
         {
             try
             {
-                model.Activated ="false";
+                model.Activated = "false";
                 db.Customers.Add(model);
                 db.SaveChanges();
                 ModelState.AddModelError("", "Đăng kí thành công, vui lòng nhận email kích hoạt tài khoản");

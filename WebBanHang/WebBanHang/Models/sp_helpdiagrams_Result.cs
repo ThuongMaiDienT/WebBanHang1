@@ -10,18 +10,13 @@
 namespace WebBanHang.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Category
+    public partial class sp_helpdiagrams_Result
     {
-        public Category()
-        {
-            this.Products = new HashSet<Product>();
-        }
-    
-        public int Id { get; set; }
-        public string NameVN { get; set; }
-    
-        public virtual ICollection<Product> Products { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

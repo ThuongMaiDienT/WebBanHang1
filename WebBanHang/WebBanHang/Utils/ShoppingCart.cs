@@ -52,7 +52,7 @@ public class ShoppingCart
         {
             if (Items.Count > 0)
             {
-                return Items.Sum(p 
+                return Items.Sum(p
                     => p.Amount * p.UnitPrice);
             }
             return 0;
@@ -63,16 +63,16 @@ public class ShoppingCart
     /// Chọn hàng (bỏ hàng vào giỏ)
     /// </summary>
     /// <param name="Id">Mã mặt hàng được chọn</param>
-    public void Add(int Id, int quantity=1)
+    public void Add(int Id, int quantity = 1)
     {
         try
         {
             var p = Items.Single(i => i.Id == Id);
-            p.Amount = p.Amount+ quantity;
+            p.Amount = p.Amount + quantity;
         }
         catch // Chưa có trong giỏ -> Lấy từ DB
         {
-            using (var db = new SHOPEntities1())
+            using (var db = new SHOPEntities())
             {
                 var p = db.Products.Find(Id);
                 p.Amount = quantity;
